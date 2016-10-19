@@ -1,0 +1,14 @@
+utilizar estante :: estático,
+   : direcciones URL => [/ "imágenes", "/ js", "/ css"],
+   : root => "público"
+
+ ejecutar lambda {| env |
+   [
+     200,
+     {
+       'Content-Type' => 'text / html',
+       "Cache-Control '=>' pública, max-age = 86400 '
+     },
+     Presentar .open ( "público / index.html ', File :: rdonly)
+   ]
+ }
